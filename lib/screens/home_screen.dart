@@ -114,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(
                   width: kWidth * 0.04,
                 ),
-                Text("Add Card",
+                Text("Add Table",
                 style: Styles.headingStyle5(
                   isBold: true
                 )),
@@ -258,7 +258,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 thickness: 2,
                 color: Colors.blueGrey,
               ),
-              if(getTable[index].list!.length <= 2)
+              if(getTable[index].list!.length >= 2)
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 5),
                 child: TextFormField(
@@ -388,9 +388,4 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
   }
-
-  void searchItems(String query){
-
-  }
-
 }
