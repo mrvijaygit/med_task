@@ -17,11 +17,13 @@ class _MyHomePageState extends State<MyHomePage> {
   List<GetTable> tableCp = [];
   bool? isDrag= false;
   final TextEditingController _textCtl = TextEditingController();
+  final TextEditingController _searchTextCtl = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
   @override
   void dispose(){
     _textCtl.dispose();
+    _searchTextCtl.dispose();
     super.dispose();
   }
 
@@ -262,7 +264,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 5),
                 child: TextFormField(
-                  controller: _textCtl,
+                  controller: _searchTextCtl,
                   decoration: Styles.requestFormFieldStyle(
                     labelText:  "Search items",
                   ),
